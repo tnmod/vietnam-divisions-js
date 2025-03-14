@@ -1,0 +1,21 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "useTabs": true,
+  "printWidth": 80,
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": false,
+  "bracketSpacing": true,
+  "proseWrap": "always",
+  "object-property-newline": true,
+  "object-curly-newline": {
+    "multiline": true,
+    "minProperties": 2
+  },
+  "plugins": []
+}
