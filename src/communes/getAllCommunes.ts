@@ -1,9 +1,9 @@
-import { communeData } from '../seeds/vietnam';
+import { getCommuneData } from '../cache';
 import { Commune } from './types';
 
 /**
- * Lấy danh sách tất cả xã/phường
+ * Lấy danh sách tất cả xã/phường (lazy loading)
  */
-export const getAllCommunes = (): Commune[] => {
-	return communeData;
+export const getAllCommunes = async (): Promise<Commune[]> => {
+	return await getCommuneData();
 };

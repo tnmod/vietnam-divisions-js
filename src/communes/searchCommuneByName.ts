@@ -1,13 +1,15 @@
-import removeAccents from 'remove-accents';
-import { communeData } from '../seeds/vietnam';
+import { searchCommunes } from '../cache';
+import compare from 'natural-compare';
 import { Commune } from './types';
+import { memoize } from '../utils';
 
 /**
- * Tìm xã/phường theo tên (tìm kiếm gần đúng, bỏ dấu)
+ * Tìm xã/phường theo tên (tìm kiếm tối ưu với index)
  */
-export const searchCommuneByName = (name: string): Commune[] => {
-	const normalizedInput = removeAccents(name.toLowerCase());
-	return communeData.filter(commune =>
-		removeAccents(commune.name.toLowerCase()).includes(normalizedInput),
-	);
+const _searchCommuneByName = async (name: string): Promise<Commune[]> => {
+	const results = await searchCommunes(name);
+	return results.sort((a, b) => compare(a.name, b.name));
 };
+
+// Memoize search results for better performance
+export const searchCommuneByName = memoize(_searchCommuneByName);

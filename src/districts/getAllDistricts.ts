@@ -1,6 +1,6 @@
-import { districtData } from '../seeds/vietnam';
-import { Province } from '../provinces';
+import { getDistrictData } from '../cache';
+import { District } from './types';
 
-export const getAllDistricts = (): Province[] => {
-	return districtData;
+export const getAllDistricts = async (): Promise<District[]> => {
+	return await getDistrictData();
 };

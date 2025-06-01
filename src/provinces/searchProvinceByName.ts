@@ -1,11 +1,12 @@
-import { provinceData } from '../seeds/vietnam';
-import similarity from 'similarity';
-import removeAccents from 'remove-accents';
+import { searchProvinces } from '../cache';
 import compare from 'natural-compare';
 import { Province } from './types';
+import { memoize } from '../utils';
 
-export const searchProvinceByName = (name: string): Province[] => {
-	return provinceData
-		.filter(province => similarity(removeAccents(province.name), removeAccents(name.toLowerCase())) > 0.5)
-		.sort((a, b) => compare(a.name, b.name));
+const _searchProvinceByName = async (name: string): Promise<Province[]> => {
+	const results = await searchProvinces(name);
+	return results.sort((a, b) => compare(a.name, b.name));
 };
+
+// Memoize search results for better performance
+export const searchProvinceByName = memoize(_searchProvinceByName);

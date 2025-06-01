@@ -1,6 +1,6 @@
 {
   "name": "vietnam-provinces-js",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -28,6 +28,31 @@
       "types": "./dist/communes.d.ts",
       "import": "./dist/communes.mjs",
       "require": "./dist/communes.js"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.js"
+    },
+    "./cache": {
+      "types": "./dist/cache.d.ts",
+      "import": "./dist/cache.mjs",
+      "require": "./dist/cache.js"
+    },
+    "./autocomplete": {
+      "types": "./dist/autocomplete.d.ts",
+      "import": "./dist/autocomplete.mjs",
+      "require": "./dist/autocomplete.js"
+    },
+    "./hierarchy": {
+      "types": "./dist/hierarchy.d.ts",
+      "import": "./dist/hierarchy.mjs",
+      "require": "./dist/hierarchy.js"
+    },
+    "./batch": {
+      "types": "./dist/batch.d.ts",
+      "import": "./dist/batch.mjs",
+      "require": "./dist/batch.js"
     }
   },
   "devDependencies": {

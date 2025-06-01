@@ -1,13 +1,15 @@
-import removeAccents from 'remove-accents';
-import { districtData } from '../seeds/vietnam';
+import { searchDistricts } from '../cache';
+import compare from 'natural-compare';
 import { District } from './types';
+import { memoize } from '../utils';
 
 /**
- * Tìm quận/huyện theo tên (tìm kiếm gần đúng, bỏ dấu)
+ * Tìm quận/huyện theo tên (tìm kiếm tối ưu với index)
  */
-export const searchDistrictByName = (name: string): District[] => {
-	const normalizedInput = removeAccents(name.toLowerCase());
-	return districtData.filter(district =>
-		removeAccents(district.name.toLowerCase()).includes(normalizedInput),
-	);
+const _searchDistrictByName = async (name: string): Promise<District[]> => {
+	const results = await searchDistricts(name);
+	return results.sort((a, b) => compare(a.name, b.name));
 };
+
+// Memoize search results for better performance
+export const searchDistrictByName = memoize(_searchDistrictByName);

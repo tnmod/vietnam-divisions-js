@@ -1,9 +1,9 @@
-import { communeData } from '../seeds/vietnam';
+import { getCommuneById as getCachedCommune } from '../cache';
 import { Commune } from './types';
 
 /**
- * Lấy thông tin một xã/phường theo mã
+ * Lấy thông tin một xã/phường theo mã (O(1) lookup)
  */
-export const getCommuneById = (communeId: string): Commune | undefined => {
-	return communeData.find(commune => commune.idCommune === communeId);
+export const getCommuneById = async (communeId: string): Promise<Commune | undefined> => {
+	return await getCachedCommune(communeId);
 };

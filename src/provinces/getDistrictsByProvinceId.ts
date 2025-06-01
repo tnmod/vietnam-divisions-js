@@ -1,6 +1,6 @@
-import { districtData } from '../seeds/vietnam';
-import { Province } from './types';
+import { getDistrictsByProvinceId as getCachedDistricts } from '../cache';
+import { District } from '../districts/types';
 
-export const getDistrictsByProvinceId = (provinceId: string): Province[] => {
-	return districtData.filter(prov => prov.idProvince === provinceId);
+export const getDistrictsByProvinceId = async (provinceId: string): Promise<District[]> => {
+	return await getCachedDistricts(provinceId);
 };

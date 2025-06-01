@@ -1,6 +1,6 @@
-import {provinceData} from "../seeds/vietnam";
+import { getProvinceData } from '../cache';
 import { Province } from './types';
 
-export const getAllProvince = ():Province[] => {
-  return provinceData;
-}
+export const getAllProvince = async (): Promise<Province[]> => {
+  return await getProvinceData();
+};
