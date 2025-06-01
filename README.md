@@ -92,9 +92,11 @@ console.log(results);
 ```ts
 import { getAllDistricts, getDistrictById } from "vietnam-provinces-js/districts";
 
-console.log(getAllDistricts());
+const districts = await getAllDistricts();
+console.log(districts);
 
-console.log(getDistrictById("001"));
+const district = await getDistrictById("001");
+console.log(district);
 ```
 📌 **Output:**
 ```json
@@ -114,9 +116,11 @@ console.log(getDistrictById("001"));
 ```ts
 import { getAllCommunes, getCommuneById } from "vietnam-provinces-js/communes";
 
-console.log(getAllCommunes());
+const communes = await getAllCommunes();
+console.log(communes);
 
-console.log(getCommuneById("00001"));
+const commune = await getCommuneById("00001");
+console.log(commune);
 ```
 📌 **Output:**
 ```json
@@ -373,5 +377,25 @@ const results = await universalFuzzySearch('Ha Noi');
 - ✅ **Flexible**: Multiple import options, tree-shaking support
 - ✅ **Feature Rich**: Analytics, validation, export, fuzzy search, and more
 - ✅ **Well Tested**: 61 test cases covering all functionality
+
+## 📋 **Version History**
+
+- **v2.0.0** (Latest) - Complete performance optimization and advanced features
+- **v1.1.2** - Basic functionality with simple search
+
+## 🔗 **Important Links**
+
+- **📦 NPM Package**: https://www.npmjs.com/package/vietnam-provinces-js
+- **📚 GitHub Repository**: https://github.com/tnmod/vietnam-provinces-js
+- **📖 Documentation**: Complete guides and examples included
+- **🐛 Issues**: https://github.com/tnmod/vietnam-provinces-js/issues
+- **📝 Changelog**: [CHANGELOG.md](./CHANGELOG.md)
+
+## 📞 **Support & Contributing**
+
+- **Issues**: Report bugs or request features on GitHub
+- **Contributions**: Pull requests are welcome
+- **License**: MIT License
+- **Author**: tnmod <nguyenphutin.dev@gmail.com>
 
 ---
