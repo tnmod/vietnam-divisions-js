@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "description": "Viet Nam Provinces",
+  "description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 63 provinces, 696 districts, and 10,051 communes with lazy loading and O(1) lookups.",
   "files": [
     "dist"
   ],
@@ -53,6 +53,26 @@
       "types": "./dist/batch.d.ts",
       "import": "./dist/batch.mjs",
       "require": "./dist/batch.js"
+    },
+    "./analytics": {
+      "types": "./dist/analytics.d.ts",
+      "import": "./dist/analytics.mjs",
+      "require": "./dist/analytics.js"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "import": "./dist/validation.mjs",
+      "require": "./dist/validation.js"
+    },
+    "./export": {
+      "types": "./dist/export.d.ts",
+      "import": "./dist/export.mjs",
+      "require": "./dist/export.js"
+    },
+    "./fuzzy": {
+      "types": "./dist/fuzzy.d.ts",
+      "import": "./dist/fuzzy.mjs",
+      "require": "./dist/fuzzy.js"
     }
   },
   "devDependencies": {
@@ -76,8 +96,22 @@
     "format": "prettier --check --ignore-path .gitignore . --write"
   },
   "keywords": [
+    "vietnam",
+    "provinces",
+    "districts",
+    "communes",
+    "administrative",
+    "geography",
+    "search",
+    "autocomplete",
+    "validation",
+    "analytics",
+    "export",
+    "fuzzy-search",
     "typescript",
-    "library"
+    "performance",
+    "lazy-loading",
+    "tree-shaking"
   ],
   "author": "tnmod",
   "license": "MIT",

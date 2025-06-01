@@ -43,6 +43,10 @@ yarn add vietnam-provinces-js
 - **🔍 Autocomplete:** Smart suggestions with scoring algorithm
 - **🏗️ Hierarchy:** Navigate through administrative levels
 - **📦 Batch Operations:** Process multiple items efficiently
+- **📊 Analytics:** Comprehensive statistics and insights
+- **✅ Validation:** Address verification and suggestions
+- **📤 Export:** Multi-format data export (JSON, CSV, XML, SQL)
+- **🔍 Fuzzy Search:** Advanced text matching with multiple algorithms
 - **⚡ Performance Utils:** Caching, memoization, and optimization tools
 
 ---
@@ -191,6 +195,105 @@ const result = await getProvincesBatch(['01', '79', '31']);
 const addresses = await getFullAddressesBatch(['00001', '00004', '00007']);
 ```
 
+### **📊 Analytics & Statistics**
+
+Get comprehensive insights about Vietnam's administrative data:
+
+```ts
+import {
+  getProvinceStats,
+  getNationalStats,
+  getRegionStats,
+  getTopProvincesByDistricts
+} from "vietnam-provinces-js/analytics";
+
+// Get detailed province statistics
+const hanoiStats = await getProvinceStats('01');
+// Returns: district count, commune count, largest/smallest districts, etc.
+
+// Get national overview
+const nationalStats = await getNationalStats();
+// Returns: totals, averages, largest/smallest provinces
+
+// Get top provinces by district count
+const topProvinces = await getTopProvincesByDistricts(5);
+```
+
+### **✅ Validation & Verification**
+
+Validate addresses and get smart suggestions:
+
+```ts
+import {
+  validateAddressHierarchy,
+  validateAndSuggestAddress,
+  batchValidateAddresses
+} from "vietnam-provinces-js/validation";
+
+// Validate complete address hierarchy
+const result = await validateAddressHierarchy('01', '001', '00001');
+// Returns: validation status, errors, warnings
+
+// Smart validation with suggestions
+const suggestions = await validateAndSuggestAddress('01');
+// Returns: valid data + suggestions for next level
+
+// Batch validate multiple addresses
+const results = await batchValidateAddresses([...addresses]);
+```
+
+### **📤 Multi-Format Export**
+
+Export data in various formats for integration:
+
+```ts
+import {
+  exportProvinces,
+  exportFlattenedAddresses,
+  exportHierarchicalData
+} from "vietnam-provinces-js/export";
+
+// Export to different formats
+const jsonData = await exportProvinces({ format: 'json' });
+const csvData = await exportProvinces({ format: 'csv' });
+const xmlData = await exportProvinces({ format: 'xml' });
+const sqlData = await exportProvinces({ format: 'sql', tableName: 'provinces' });
+
+// Export flattened address data
+const flatData = await exportFlattenedAddresses({
+  format: 'json',
+  filterByProvince: ['01', '79']
+});
+```
+
+### **🔍 Advanced Fuzzy Search**
+
+Powerful search with multiple algorithms and scoring:
+
+```ts
+import {
+  fuzzySearchProvinces,
+  universalFuzzySearch,
+  suggestCorrections
+} from "vietnam-provinces-js/fuzzy";
+
+// Advanced fuzzy search with scoring
+const results = await fuzzySearchProvinces('Ha Noi', {
+  threshold: 0.5,
+  maxResults: 10
+});
+
+// Universal search across all types
+const universal = await universalFuzzySearch('Quan 1', {
+  threshold: 0.3,
+  filters: { provinceId: '79' },
+  sortBy: 'relevance'
+});
+
+// Suggest corrections for misspelled queries
+const corrections = await suggestCorrections('Ha Noi Viet Nam');
+```
+
 ## 📊 **Performance Comparison**
 
 | Operation | Before | After | Improvement |
@@ -221,7 +324,54 @@ const district = await getDistrictById('001');
 ## 📚 **Additional Resources**
 
 - 📖 [Performance Guide](./PERFORMANCE_GUIDE.md) - Detailed performance optimizations
-- 🧪 [Run Demo](./demo.js) - See all features in action
+- 🚀 [Optimization Summary](./OPTIMIZATION_SUMMARY.md) - Complete optimization overview
+- 🧪 [Basic Demo](./demo.js) - See core features in action
+- 🎯 [Advanced Demo](./advanced-demo.js) - Showcase all advanced features
 - 🔧 [API Documentation](./docs/) - Complete API reference
+
+## 🎯 **Quick Start Examples**
+
+### **Basic Usage**
+```bash
+npm install vietnam-provinces-js
+```
+
+```typescript
+import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getDistrictById } from 'vietnam-provinces-js/districts';
+
+const provinces = await getAllProvince();
+const district = await getDistrictById('001');
+```
+
+### **Advanced Usage**
+```typescript
+// Analytics
+import { getNationalStats } from 'vietnam-provinces-js/analytics';
+const stats = await getNationalStats();
+
+// Validation
+import { validateAddressHierarchy } from 'vietnam-provinces-js/validation';
+const isValid = await validateAddressHierarchy('01', '001', '00001');
+
+// Export
+import { exportProvinces } from 'vietnam-provinces-js/export';
+const csvData = await exportProvinces({ format: 'csv' });
+
+// Fuzzy Search
+import { universalFuzzySearch } from 'vietnam-provinces-js/fuzzy';
+const results = await universalFuzzySearch('Ha Noi');
+```
+
+## 🏆 **Why Choose This Library?**
+
+- ✅ **Production Ready**: Enterprise-grade performance and reliability
+- ✅ **Comprehensive**: Complete Vietnam administrative data with 63 provinces, 696 districts, 10,051 communes
+- ✅ **High Performance**: 10-100x faster than traditional approaches
+- ✅ **Memory Efficient**: 8x less memory usage with lazy loading
+- ✅ **Developer Friendly**: TypeScript support, comprehensive documentation
+- ✅ **Flexible**: Multiple import options, tree-shaking support
+- ✅ **Feature Rich**: Analytics, validation, export, fuzzy search, and more
+- ✅ **Well Tested**: 61 test cases covering all functionality
 
 ---
