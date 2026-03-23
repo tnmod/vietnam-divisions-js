@@ -1,0 +1,240 @@
+[
+  {
+    "idProvince": "01",
+    "name": "Thành phố Hà Nội",
+    "shortName": "Thành phố Hà Nội",
+    "code": "HNI",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "04",
+    "name": "Cao Bằng",
+    "shortName": "Cao Bằng",
+    "code": "CBG",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "08",
+    "name": "Tuyên Quang",
+    "shortName": "Tuyên Quang",
+    "code": "TGQ",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "11",
+    "name": "Điện Biên",
+    "shortName": "Điện Biên",
+    "code": "DBN",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "12",
+    "name": "Lai Châu",
+    "shortName": "Lai Châu",
+    "code": "LCU",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "14",
+    "name": "Sơn La",
+    "shortName": "Sơn La",
+    "code": "SLA",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "15",
+    "name": "Lào Cai",
+    "shortName": "Lào Cai",
+    "code": "LCI",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "19",
+    "name": "Thái Nguyên",
+    "shortName": "Thái Nguyên",
+    "code": "TNN",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "20",
+    "name": "Lạng Sơn",
+    "shortName": "Lạng Sơn",
+    "code": "LSN",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "22",
+    "name": "Quảng Ninh",
+    "shortName": "Quảng Ninh",
+    "code": "QNH",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "24",
+    "name": "Bắc Ninh",
+    "shortName": "Bắc Ninh",
+    "code": "BNH",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "25",
+    "name": "Phú Thọ",
+    "shortName": "Phú Thọ",
+    "code": "PTO",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "31",
+    "name": "Thành phố Hải Phòng",
+    "shortName": "Thành phố Hải Phòng",
+    "code": "HPG",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "33",
+    "name": "Hưng Yên",
+    "shortName": "Hưng Yên",
+    "code": "HYN",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "37",
+    "name": "Ninh Bình",
+    "shortName": "Ninh Bình",
+    "code": "NBH",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "38",
+    "name": "Thanh Hóa",
+    "shortName": "Thanh Hóa",
+    "code": "THA",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "40",
+    "name": "Nghệ An",
+    "shortName": "Nghệ An",
+    "code": "NAN",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "42",
+    "name": "Hà Tĩnh",
+    "shortName": "Hà Tĩnh",
+    "code": "HTH",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "44",
+    "name": "Quảng Trị",
+    "shortName": "Quảng Trị",
+    "code": "QTI",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "46",
+    "name": "Thành phố Huế",
+    "shortName": "Thành phố Huế",
+    "code": "TTH",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "48",
+    "name": "Thành phố Đà Nẵng",
+    "shortName": "Thành phố Đà Nẵng",
+    "code": "DNG",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "51",
+    "name": "Quảng Ngãi",
+    "shortName": "Quảng Ngãi",
+    "code": "QNI",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "52",
+    "name": "Gia Lai",
+    "shortName": "Gia Lai",
+    "code": "GLI",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "56",
+    "name": "Khánh Hòa",
+    "shortName": "Khánh Hòa",
+    "code": "KHA",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "66",
+    "name": "Đắk Lắk",
+    "shortName": "Đắk Lắk",
+    "code": "DLK",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "68",
+    "name": "Lâm Đồng",
+    "shortName": "Lâm Đồng",
+    "code": "LDG",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "75",
+    "name": "Đồng Nai",
+    "shortName": "Đồng Nai",
+    "code": "DNI",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "79",
+    "name": "Thành phố Hồ Chí Minh",
+    "shortName": "Thành phố Hồ Chí Minh",
+    "code": "HCM",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "80",
+    "name": "Tây Ninh",
+    "shortName": "Tây Ninh",
+    "code": "TNH",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "82",
+    "name": "Đồng Tháp",
+    "shortName": "Đồng Tháp",
+    "code": "DTP",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "86",
+    "name": "Vĩnh Long",
+    "shortName": "Vĩnh Long",
+    "code": "VLG",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "91",
+    "name": "An Giang",
+    "shortName": "An Giang",
+    "code": "AGG",
+    "placeType": "Tỉnh"
+  },
+  {
+    "idProvince": "92",
+    "name": "Thành phố Cần Thơ",
+    "shortName": "Thành phố Cần Thơ",
+    "code": "CTO",
+    "placeType": "Thành phố Trung Ương"
+  },
+  {
+    "idProvince": "96",
+    "name": "Cà Mau",
+    "shortName": "Cà Mau",
+    "code": "CMU",
+    "placeType": "Tỉnh"
+  }
+]

@@ -15,6 +15,8 @@ export default defineConfig({
 		validation: 'src/features/validation.ts',
 		export: 'src/features/export.ts',
 		fuzzy: 'src/features/fuzzy.ts',
+		v3: 'src/v3/index.ts',
+		migration: 'src/migration/index.ts',
 	},
 	clean: true,
 	format: ['cjs', 'esm'],
@@ -33,6 +35,8 @@ export default defineConfig({
 			validation: 'src/features/validation.ts',
 			export: 'src/features/export.ts',
 			fuzzy: 'src/features/fuzzy.ts',
+			v3: 'src/v3/index.ts',
+			migration: 'src/migration/index.ts',
 		},
 	},
 	sourcemap: false, // ✅ Tránh tạo file .d.ts.map không cần thiết
