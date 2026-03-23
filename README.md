@@ -5,8 +5,8 @@ Thư viện JavaScript/TypeScript cung cấp dữ liệu hành chính Việt Nam
 > **Đã đổi tên** từ `vietnam-divisions-js` sang `vietnam-divisions-js` kể từ v3.0.0.
 
 ### NPMJS
-LINK: [vietnam-divisions-js](https://www.npmjs.com/package/vietnam-divisions-js)
-OLD: [vietnam-provinces-js](https://www.npmjs.com/package/vietnam-provinces-js)
+* **LINK:** [vietnam-divisions-js](https://www.npmjs.com/package/vietnam-divisions-js)
+* **OLD:** [vietnam-provinces-js](https://www.npmjs.com/package/vietnam-provinces-js)
 
 ```sh
 npm install vietnam-divisions-js
