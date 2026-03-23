@@ -1,9 +1,11 @@
-# Vietnam Provinces JS
+# Vietnam Divisions JS
 
 Thư viện JavaScript/TypeScript cung cấp dữ liệu hành chính Việt Nam. Hỗ trợ cả hệ thống cũ (63 tỉnh, 3 cấp) và hệ thống mới theo Nghị quyết 202/2025/QH15 (34 tỉnh, 2 cấp).
 
+> **Đã đổi tên** từ `vietnam-provinces-js` sang `vietnam-divisions-js` kể từ v3.0.0.
+
 ```sh
-npm install vietnam-provinces-js
+npm install vietnam-divisions-js
 ```
 
 ## Sử dụng
@@ -11,7 +13,7 @@ npm install vietnam-provinces-js
 ### Dữ liệu cũ (v2) — 63 tỉnh, 3 cấp: Tỉnh → Quận/Huyện → Xã/Phường
 
 ```typescript
-import { Provinces, Districts, Communes } from 'vietnam-provinces-js';
+import { Provinces, Districts, Communes } from 'vietnam-divisions-js';
 
 const provinces = await Provinces.getAllProvince();          // 63 tỉnh
 const districts = await Districts.getAllDistricts();          // 696 quận/huyện
@@ -27,7 +29,7 @@ const commune  = await Communes.getCommuneById('00001');
 Theo NQ 202/2025/QH15, hệ thống hành chính mới bỏ cấp quận/huyện.
 
 ```typescript
-import { v3 } from 'vietnam-provinces-js';
+import { v3 } from 'vietnam-divisions-js';
 
 const provinces = await v3.getAllProvinces();                 // 34 tỉnh
 const hcm       = await v3.getProvinceByCode('HCM');         // tìm theo mã 3 ký tự
@@ -38,7 +40,7 @@ const search    = await v3.searchProvinceByName('Đà Nẵng');
 ### Migration — Chuyển đổi dữ liệu cũ ↔ mới
 
 ```typescript
-import { Migration } from 'vietnam-provinces-js';
+import { Migration } from 'vietnam-divisions-js';
 
 // Chuyển mã xã cũ → mới
 const mapped = await Migration.migrateWardCode('26881');
@@ -57,7 +59,7 @@ const allMerges = await Migration.getAllMergedProvinces();
 ### Dùng cả v2 + v3 trong cùng 1 app
 
 ```typescript
-import { Provinces, v3, Migration } from 'vietnam-provinces-js';
+import { Provinces, v3, Migration } from 'vietnam-divisions-js';
 
 // Hiển thị địa chỉ cũ từ database
 const oldProvince = await Provinces.getProvinceById('02');     // Hà Giang
@@ -70,8 +72,8 @@ const newProvince = await v3.getProvinceById(merged.newProvinceId);
 ### Tree-shaking — Import trực tiếp
 
 ```typescript
-import { getAllProvinces } from 'vietnam-provinces-js/v3';
-import { migrateWardCode } from 'vietnam-provinces-js/migration';
+import { getAllProvinces } from 'vietnam-divisions-js/v3';
+import { migrateWardCode } from 'vietnam-divisions-js/migration';
 ```
 
 ## Dữ liệu

@@ -1,10 +1,10 @@
 {
-  "name": "vietnam-provinces-js",
+  "name": "vietnam-divisions-js",
   "version": "3.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 63 provinces, 696 districts, and 10,051 communes with lazy loading and O(1) lookups.",
+  "description": "Vietnam administrative divisions library. Supports both legacy (63 provinces, 3 levels) and new system per Resolution 202/2025/QH15 (34 provinces, 2 levels) with migration utilities.",
   "files": [
     "dist"
   ],
