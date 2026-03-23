@@ -16,7 +16,7 @@
   - `Migration.isProvinceMerged()` — kiểm tra tỉnh có bị sáp nhập
   - `Migration.getWardMappings()` — toàn bộ bảng ánh xạ (10,977 bản ghi)
 - Tree-shakable imports: `vietnam-divisions-js/v3`, `vietnam-divisions-js/migration`
-- **Package renamed** from `vietnam-provinces-js` to `vietnam-divisions-js`
+- **Package renamed** from `vietnam-divisions-js` to `vietnam-divisions-js`
 
 ### Unchanged
 - API cũ (`Provinces`, `Districts`, `Communes`) hoạt động y nguyên — không breaking change

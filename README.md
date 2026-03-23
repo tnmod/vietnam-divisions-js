@@ -2,7 +2,7 @@
 
 Thư viện JavaScript/TypeScript cung cấp dữ liệu hành chính Việt Nam. Hỗ trợ cả hệ thống cũ (63 tỉnh, 3 cấp) và hệ thống mới theo Nghị quyết 202/2025/QH15 (34 tỉnh, 2 cấp).
 
-> **Đã đổi tên** từ `vietnam-provinces-js` sang `vietnam-divisions-js` kể từ v3.0.0.
+> **Đã đổi tên** từ `vietnam-divisions-js` sang `vietnam-divisions-js` kể từ v3.0.0.
 
 ```sh
 npm install vietnam-divisions-js
