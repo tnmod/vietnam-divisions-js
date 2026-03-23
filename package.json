@@ -1,6 +1,6 @@
 {
   "name": "vietnam-provinces-js",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -73,14 +73,25 @@
       "types": "./dist/fuzzy.d.ts",
       "import": "./dist/fuzzy.mjs",
       "require": "./dist/fuzzy.js"
+    },
+    "./v3": {
+      "types": "./dist/v3.d.ts",
+      "import": "./dist/v3.mjs",
+      "require": "./dist/v3.js"
+    },
+    "./migration": {
+      "types": "./dist/migration.d.ts",
+      "import": "./dist/migration.mjs",
+      "require": "./dist/migration.js"
     }
   },
   "devDependencies": {
     "@types/natural-compare": "^1.4.3",
     "@types/similarity": "^1.2.3",
+    "prettier": "^3.3.3",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
-    "prettier": "^3.3.3",
+    "vietnam-address-database": "^1.0.0",
     "vitest": "^3.0.8"
   },
   "dependencies": {

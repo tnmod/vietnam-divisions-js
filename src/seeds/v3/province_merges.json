@@ -1,0 +1,256 @@
+[
+  {
+    "newProvinceId": "79",
+    "newProvinceName": "Thành phố Hồ Chí Minh",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "74",
+        "oldProvinceName": "Tỉnh Bình Dương"
+      },
+      {
+        "oldProvinceId": "77",
+        "oldProvinceName": "Tỉnh Bà Rịa - Vũng Tàu"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "56",
+    "newProvinceName": "Khánh Hòa",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "58",
+        "oldProvinceName": "Tỉnh Ninh Thuận"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "86",
+    "newProvinceName": "Vĩnh Long",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "83",
+        "oldProvinceName": "Tỉnh Bến Tre"
+      },
+      {
+        "oldProvinceId": "84",
+        "oldProvinceName": "Tỉnh Trà Vinh"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "68",
+    "newProvinceName": "Lâm Đồng",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "60",
+        "oldProvinceName": "Tỉnh Bình Thuận"
+      },
+      {
+        "oldProvinceId": "67",
+        "oldProvinceName": "Tỉnh Đắk Nông"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "31",
+    "newProvinceName": "Thành phố Hải Phòng",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "30",
+        "oldProvinceName": "Tỉnh Hải Dương"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "82",
+    "newProvinceName": "Đồng Tháp",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "87",
+        "oldProvinceName": "Tỉnh Đồng Tháp"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "52",
+    "newProvinceName": "Gia Lai",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "64",
+        "oldProvinceName": "Tỉnh Gia Lai"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "92",
+    "newProvinceName": "Thành phố Cần Thơ",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "94",
+        "oldProvinceName": "Tỉnh Sóc Trăng"
+      },
+      {
+        "oldProvinceId": "93",
+        "oldProvinceName": "Tỉnh Hậu Giang"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "48",
+    "newProvinceName": "Thành phố Đà Nẵng",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "49",
+        "oldProvinceName": "Tỉnh Quảng Nam"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "75",
+    "newProvinceName": "Đồng Nai",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "70",
+        "oldProvinceName": "Tỉnh Bình Phước"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "08",
+    "newProvinceName": "Tuyên Quang",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "02",
+        "oldProvinceName": "Tỉnh Hà Giang"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "80",
+    "newProvinceName": "Tây Ninh",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "72",
+        "oldProvinceName": "Tỉnh Tây Ninh"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "96",
+    "newProvinceName": "Cà Mau",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "95",
+        "oldProvinceName": "Tỉnh Bạc Liêu"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "44",
+    "newProvinceName": "Quảng Trị",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "45",
+        "oldProvinceName": "Tỉnh Quảng Trị"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "66",
+    "newProvinceName": "Đắk Lắk",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "54",
+        "oldProvinceName": "Tỉnh Phú Yên"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "19",
+    "newProvinceName": "Thái Nguyên",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "06",
+        "oldProvinceName": "Tỉnh Bắc Kạn"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "91",
+    "newProvinceName": "An Giang",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "89",
+        "oldProvinceName": "Tỉnh An Giang"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "24",
+    "newProvinceName": "Bắc Ninh",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "27",
+        "oldProvinceName": "Tỉnh Bắc Ninh"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "15",
+    "newProvinceName": "Lào Cai",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "10",
+        "oldProvinceName": "Tỉnh Lào Cai"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "37",
+    "newProvinceName": "Ninh Bình",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "35",
+        "oldProvinceName": "Tỉnh Hà Nam"
+      },
+      {
+        "oldProvinceId": "36",
+        "oldProvinceName": "Tỉnh Nam Định"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "51",
+    "newProvinceName": "Quảng Ngãi",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "62",
+        "oldProvinceName": "Tỉnh Kon Tum"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "25",
+    "newProvinceName": "Phú Thọ",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "17",
+        "oldProvinceName": "Tỉnh Hoà Bình"
+      },
+      {
+        "oldProvinceId": "26",
+        "oldProvinceName": "Tỉnh Vĩnh Phúc"
+      }
+    ]
+  },
+  {
+    "newProvinceId": "33",
+    "newProvinceName": "Hưng Yên",
+    "mergedFrom": [
+      {
+        "oldProvinceId": "34",
+        "oldProvinceName": "Tỉnh Thái Bình"
+      }
+    ]
+  }
+]
