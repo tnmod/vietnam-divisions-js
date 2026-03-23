@@ -4,6 +4,12 @@ Thư viện JavaScript/TypeScript cung cấp dữ liệu hành chính Việt Nam
 
 > **Đã đổi tên** từ `vietnam-divisions-js` sang `vietnam-divisions-js` kể từ v3.0.0.
 
+[![NPM Downloads](https://nodei.co/npm/vietnam-divisions-js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vietnam-divisions-js/)
+
+![NPM Version](https://img.shields.io/npm/v/vietnam-divisions-js)
+
+![NPM Downloads](https://img.shields.io/npm/dm/vietnam-divisions-js)
+
 ### NPMJS
 * **LINK:** [vietnam-divisions-js](https://www.npmjs.com/package/vietnam-divisions-js)
 * **OLD:** [vietnam-provinces-js](https://www.npmjs.com/package/vietnam-provinces-js)
