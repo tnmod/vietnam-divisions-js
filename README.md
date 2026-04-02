@@ -10,10 +10,10 @@ Thư viện JavaScript/TypeScript cung cấp dữ liệu hành chính Việt Nam
 
 ![NPM Downloads](https://img.shields.io/npm/dm/vietnam-divisions-js)
 
-⚡ 10x faster initial load with lazy loading
-🔍 50x faster ID lookups with O(1) hash maps
-💾 8x less memory usage with smart caching
-🎯 Tree-shakable - only load what you need
+⚡ 10x faster initial load with lazy loading  
+🔍 50x faster ID lookups with O(1) hash maps  
+💾 8x less memory usage with smart caching  
+🎯 Tree-shakable - only load what you need  
 🔄 Memoized expensive operations for instant repeated calls
 
 ### NPMJS
