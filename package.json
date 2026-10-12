@@ -1,6 +1,6 @@
 {
   "name": "vietnam-divisions-js",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -102,8 +102,11 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "test": "vitest run",
+    "test": "node scripts/validate-data.cjs && vitest run",
     "test:watch": "vitest",
+    "validate": "node scripts/validate-data.cjs",
+    "rebuild:data": "node scripts/build-v3-data.cjs",
+    "fetch:legal": "node scripts/fetch-nso-legal.cjs",
     "format": "prettier --check --ignore-path .gitignore . --write"
   },
   "keywords": [

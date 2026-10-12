@@ -1,0 +1,325 @@
+{
+  "source": {
+    "file": "data-sources/nso/BangChuyendoiDVHCmoi_cu_final.xlsx",
+    "url": "https://danhmuchanhchinh.nso.gov.vn/TAPTIN/BangChuyendoi%C4%90VHCmoi_cu_final.xlsx",
+    "sheet": "Tổng hợp_không merge",
+    "effectiveDate": "2025-07-01"
+  },
+  "counts": {
+    "nsoRows": 10571,
+    "communes": 3321,
+    "provinces": 34,
+    "mappings": 10571,
+    "mappingsWithoutOldWardCode": 6,
+    "byRelation": {
+      "MERGED": 9464,
+      "PARTIAL": 969,
+      "UNCHANGED": 127,
+      "DISTRICT_CONVERTED": 5,
+      "UNCODED_AREA": 1,
+      "RENAMED": 5
+    }
+  },
+  "communeChanges": {
+    "removed": [],
+    "added": []
+  },
+  "unresolved": {
+    "oldWardCodesNotInV2Snapshot": [
+      {
+        "row": 1549,
+        "oldWardCode": "03980",
+        "oldWardName": "Phường Mộc Lỵ"
+      },
+      {
+        "row": 1553,
+        "oldWardCode": "03984",
+        "oldWardName": "Phường Cờ Đỏ"
+      },
+      {
+        "row": 1554,
+        "oldWardCode": "03983",
+        "oldWardName": "Phường Bình Minh"
+      },
+      {
+        "row": 8560,
+        "oldWardCode": "26929",
+        "oldWardName": "Phường 14"
+      },
+      {
+        "row": 8566,
+        "oldWardCode": "26953",
+        "oldWardName": "Phường 19"
+      },
+      {
+        "row": 8606,
+        "oldWardCode": "27076",
+        "oldWardName": "Phường 15"
+      },
+      {
+        "row": 8611,
+        "oldWardCode": "27076",
+        "oldWardName": "Phường 15"
+      },
+      {
+        "row": 8648,
+        "oldWardCode": "27226",
+        "oldWardName": "Phường 11"
+      },
+      {
+        "row": 8652,
+        "oldWardCode": "27232",
+        "oldWardName": "Phường 10"
+      },
+      {
+        "row": 8686,
+        "oldWardCode": "27367",
+        "oldWardName": "Phường 2"
+      },
+      {
+        "row": 8687,
+        "oldWardCode": "27373",
+        "oldWardName": "Phường 1"
+      }
+    ],
+    "v2CommunesWithoutNsoMapping": [
+      {
+        "idCommune": "01651",
+        "idDistrict": "049",
+        "name": "Xã Mỹ Hưng"
+      },
+      {
+        "idCommune": "02482",
+        "idDistrict": "075",
+        "name": "Xã Phú Thịnh"
+      },
+      {
+        "idCommune": "03751",
+        "idDistrict": "119",
+        "name": "Xã Chiềng Ly"
+      },
+      {
+        "idCommune": "03898",
+        "idDistrict": "122",
+        "name": "Thị trấn Phù Yên"
+      },
+      {
+        "idCommune": "03913",
+        "idDistrict": "122",
+        "name": "Xã Huy Bắc"
+      },
+      {
+        "idCommune": "03988",
+        "idDistrict": "123",
+        "name": "Xã Tân Hợp"
+      },
+      {
+        "idCommune": "03991",
+        "idDistrict": "123",
+        "name": "Xã Qui Hướng"
+      },
+      {
+        "idCommune": "04003",
+        "idDistrict": "123",
+        "name": "Xã Tà Lai"
+      },
+      {
+        "idCommune": "04060",
+        "idDistrict": "124",
+        "name": "Thị trấn Yên Châu"
+      },
+      {
+        "idCommune": "07693",
+        "idDistrict": "213",
+        "name": "Xã Tân An"
+      },
+      {
+        "idCommune": "07732",
+        "idDistrict": "213",
+        "name": "Xã Nham Sơn"
+      },
+      {
+        "idCommune": "07744",
+        "idDistrict": "213",
+        "name": "Xã Thắng Cương"
+      },
+      {
+        "idCommune": "16387",
+        "idDistrict": "380",
+        "name": "Xã Đông Khê"
+      },
+      {
+        "idCommune": "16411",
+        "idDistrict": "380",
+        "name": "Xã Đông Xuân"
+      },
+      {
+        "idCommune": "18448",
+        "idDistrict": "445",
+        "name": "Xã Bình Lộc"
+      },
+      {
+        "idCommune": "20176",
+        "idDistrict": "482",
+        "name": "Xã Hương Hòa"
+      },
+      {
+        "idCommune": "20674",
+        "idDistrict": "509",
+        "name": "Xã Quế Phước"
+      },
+      {
+        "idCommune": "25102",
+        "idDistrict": "682",
+        "name": "Xã Đạ M'ri"
+      },
+      {
+        "idCommune": "25174",
+        "idDistrict": "682",
+        "name": "Xã Mỹ Lâm"
+      },
+      {
+        "idCommune": "25177",
+        "idDistrict": "682",
+        "name": "Xã Tư Nghĩa"
+      },
+      {
+        "idCommune": "25186",
+        "idDistrict": "682",
+        "name": "Xã Phù Mỹ"
+      },
+      {
+        "idCommune": "26935",
+        "idDistrict": "765",
+        "name": "Phường 14"
+      },
+      {
+        "idCommune": "26959",
+        "idDistrict": "765",
+        "name": "Phường 19"
+      },
+      {
+        "idCommune": "27067",
+        "idDistrict": "768",
+        "name": "Phường 15"
+      },
+      {
+        "idCommune": "27217",
+        "idDistrict": "772",
+        "name": "Phường 11"
+      },
+      {
+        "idCommune": "27223",
+        "idDistrict": "772",
+        "name": "Phường 10"
+      },
+      {
+        "idCommune": "27361",
+        "idDistrict": "775",
+        "name": "Phường 2"
+      },
+      {
+        "idCommune": "27379",
+        "idDistrict": "775",
+        "name": "Phường 1"
+      }
+    ]
+  },
+  "nameDifferences": {
+    "libraryVsNso": [
+      {
+        "code": "05569",
+        "library": "Xã Định Hóa",
+        "nso": "Xã Định Hoá"
+      },
+      {
+        "code": "13396",
+        "library": "Phường Nguyễn Úy",
+        "nso": "Phường Nguyễn Uý"
+      },
+      {
+        "code": "14167",
+        "library": "Xã Giao Thủy",
+        "nso": "Xã Giao Thuỷ"
+      },
+      {
+        "code": "14677",
+        "library": "Xã Định Hóa",
+        "nso": "Xã Định Hoá"
+      },
+      {
+        "code": "22924",
+        "library": "Phường Phú Thủy",
+        "nso": "Phường Phú Thuỷ"
+      },
+      {
+        "code": "24184",
+        "library": "Xã Ea H’Leo",
+        "nso": "Xã Ea H'Leo"
+      },
+      {
+        "code": "24280",
+        "library": "Xã Cư M’gar",
+        "nso": "Xã Cư M'gar"
+      },
+      {
+        "code": "24286",
+        "library": "Xã Ea M’Droh",
+        "nso": "Xã Ea M'Droh"
+      },
+      {
+        "code": "24412",
+        "library": "Xã M’Drắk",
+        "nso": "Xã M'Drắk"
+      },
+      {
+        "code": "24436",
+        "library": "Xã Cư M’ta",
+        "nso": "Xã Cư M'ta"
+      },
+      {
+        "code": "24496",
+        "library": "Xã Ea Kly",
+        "nso": "Xa Ea Kly"
+      },
+      {
+        "code": "24829",
+        "library": "Phường B'Lao",
+        "nso": "Phường B’Lao"
+      },
+      {
+        "code": "24934",
+        "library": "Xã D'Ran",
+        "nso": "Xã D’Ran"
+      },
+      {
+        "code": "27823",
+        "library": "Xã Mộc Hóa",
+        "nso": "Xã Mộc Hoá"
+      }
+    ],
+    "nsoInternalVariants": [
+      {
+        "code": "05941",
+        "names": [
+          "Xã Điềm Thụy",
+          "Xã Điềm Thuỵ"
+        ]
+      },
+      {
+        "code": "05941",
+        "names": [
+          "Xã Điềm Thụy",
+          "Xã Điềm Thuỵ"
+        ]
+      },
+      {
+        "code": "05941",
+        "names": [
+          "Xã Điềm Thụy",
+          "Xã Điềm Thuỵ"
+        ]
+      }
+    ]
+  }
+}

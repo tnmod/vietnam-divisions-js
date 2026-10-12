@@ -32,17 +32,22 @@ const loadProvinceMerges = async (): Promise<void> => {
 	});
 };
 
-export const migrateWardCode = async (oldWardCode: string): Promise<WardMapping[]> => {
+export const migrateWardCode = async (
+	oldWardCode: string
+): Promise<WardMapping[]> => {
 	return await getMappingsByOldCode(oldWardCode);
 };
 
-export const reverseMigrateWardCode = async (newWardCode: string): Promise<WardMapping[]> => {
+export const reverseMigrateWardCode = async (
+	newWardCode: string
+): Promise<WardMapping[]> => {
 	return await getMappingsByNewCode(newWardCode);
 };
 
 export const batchMigrateWardCodes = async (
 	oldWardCodes: string[]
 ): Promise<BatchMigrateResult[]> => {
+	if (!Array.isArray(oldWardCodes)) return [];
 	const results: BatchMigrateResult[] = [];
 	for (const code of oldWardCodes) {
 		const mappings = await getMappingsByOldCode(code);
@@ -62,8 +67,9 @@ export const getWardMappings = async (): Promise<WardMapping[]> => {
 export const getMergedProvince = async (
 	oldProvinceId: string
 ): Promise<MergedProvinceResult | undefined> => {
+	if (!oldProvinceId) return undefined;
 	await loadProvinceMerges();
-	return oldToNewProvinceMap!.get(oldProvinceId);
+	return oldToNewProvinceMap!.get(String(oldProvinceId));
 };
 
 export const getAllMergedProvinces = async (): Promise<ProvinceMergeInfo[]> => {
@@ -71,9 +77,12 @@ export const getAllMergedProvinces = async (): Promise<ProvinceMergeInfo[]> => {
 	return provinceMerges!;
 };
 
-export const isProvinceMerged = async (oldProvinceId: string): Promise<boolean> => {
+export const isProvinceMerged = async (
+	oldProvinceId: string
+): Promise<boolean> => {
+	if (!oldProvinceId) return false;
 	await loadProvinceMerges();
-	return oldToNewProvinceMap!.has(oldProvinceId);
+	return oldToNewProvinceMap!.has(String(oldProvinceId));
 };
 
 export type {
@@ -81,4 +90,4 @@ export type {
 	MergedProvinceResult,
 	BatchMigrateResult,
 } from './types';
-export type { WardMapping } from '../v3/types';
+export type { WardMapping, WardMappingRelation } from '../v3/types';

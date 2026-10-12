@@ -64,17 +64,17 @@
   },
   {
     "idProvince": "22",
-    "name": "Quảng Ninh",
-    "shortName": "Quảng Ninh",
+    "name": "Thành phố Quảng Ninh",
+    "shortName": "Thành phố Quảng Ninh",
     "code": "QNH",
-    "placeType": "Tỉnh"
+    "placeType": "Thành phố Trung Ương"
   },
   {
     "idProvince": "24",
-    "name": "Bắc Ninh",
-    "shortName": "Bắc Ninh",
+    "name": "Thành phố Bắc Ninh",
+    "shortName": "Thành phố Bắc Ninh",
     "code": "BNH",
-    "placeType": "Tỉnh"
+    "placeType": "Thành phố Trung Ương"
   },
   {
     "idProvince": "25",
@@ -183,10 +183,10 @@
   },
   {
     "idProvince": "75",
-    "name": "Đồng Nai",
-    "shortName": "Đồng Nai",
+    "name": "Thành phố Đồng Nai",
+    "shortName": "Thành phố Đồng Nai",
     "code": "DNI",
-    "placeType": "Tỉnh"
+    "placeType": "Thành phố Trung Ương"
   },
   {
     "idProvince": "79",

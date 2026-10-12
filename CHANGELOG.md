@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.1] - 2026-10-05
+
+### Fixed
+- `commune.json`: Xã Ia Mơ dùng đúng mã NSO `23938` (trước đây là `23737` — Xã Ia Mơ Nông đã sáp nhập vào Xã Ia Ly)
+- `ward_mappings.json` được tái tạo từ bảng chuyển đổi chính thức của Cục Thống kê (10,571 bản ghi, kèm `relation`, `note`, mã huyện/tỉnh cũ)
+- Chuẩn hoá Unicode NFC cho 32 tên xã/phường
+- Các hàm tra cứu v3/migration trả về kết quả rỗng thay vì lỗi với đầu vào rỗng/`null`/`undefined`
+
+### Changed
+- Quảng Ninh (22), Bắc Ninh (24), Đồng Nai (75) là Thành phố trực thuộc Trung ương (NQ 36/2026/QH16, 39/2026/QH16, 30/2026/QH16) — tổng 9 TP trực thuộc TW
+- `WardMapping.oldWardCode` có thể là `null` (5 đặc khu đảo + 1 khu vực chưa có mã); thêm type `WardMappingRelation`
+
+### Added
+- Scripts: `npm run validate`, `npm run rebuild:data`, `npm run fetch:legal`; `npm test` chạy validator dữ liệu trước vitest
+
 ## [3.0.0] - 2025-06-23
 
 ### Added
@@ -14,7 +29,7 @@
   - `Migration.getMergedProvince()` — tra cứu tỉnh sáp nhập
   - `Migration.getAllMergedProvinces()` — danh sách sáp nhập
   - `Migration.isProvinceMerged()` — kiểm tra tỉnh có bị sáp nhập
-  - `Migration.getWardMappings()` — toàn bộ bảng ánh xạ (10,977 bản ghi)
+  - `Migration.getWardMappings()` — toàn bộ bảng ánh xạ (10,571 bản ghi)
 - Tree-shakable imports: `vietnam-divisions-js/v3`, `vietnam-divisions-js/migration`
 - **Package renamed** from `vietnam-divisions-js` to `vietnam-divisions-js`
 

@@ -68,18 +68,54 @@ describe('v3 API — NQ 202/2025/QH15', () => {
 			expect(ids).not.toContain('30'); // Hải Dương
 		});
 
-		it('should search provinces by name', async () => {
-			const results = await searchProvinceByName('Hà Nội');
-			expect(results.length).toBeGreaterThan(0);
-			expect(results.some((p) => p.idProvince === '01')).toBe(true);
+		it('should search provinces by name (accent-insensitive, NFD-safe, case-insensitive)', async () => {
+			const hn = await searchProvinceByName('Hà Nội');
+			expect(hn.length).toBeGreaterThan(0);
+			expect(hn.some((p) => p.idProvince === '01')).toBe(true);
+
+			// Unaccented
+			const noAccent = await searchProvinceByName('ha noi');
+			expect(noAccent.some((p) => p.idProvince === '01')).toBe(true);
+
+			// Mixed case and spaces
+			const mixed = await searchProvinceByName('  hÀ nỘi  ');
+			expect(mixed.some((p) => p.idProvince === '01')).toBe(true);
+
+			// NFD normalized input
+			const nfd = await searchProvinceByName('Hà Nội'.normalize('NFD'));
+			expect(nfd.some((p) => p.idProvince === '01')).toBe(true);
+
+			// 2026 central cities by short or full name
+			for (const query of [
+				'Bắc Ninh',
+				'bac ninh',
+				'Đồng Nai',
+				'dong nai',
+				'Quảng Ninh',
+				'quang ninh',
+			]) {
+				const res = await searchProvinceByName(query);
+				expect(res.length).toBeGreaterThan(0);
+			}
 		});
 
-		it('should have 6 TP trực thuộc TW', async () => {
+		it('should have 9 TP trực thuộc TW (incl. Quảng Ninh, Bắc Ninh, Đồng Nai per 2026 resolutions)', async () => {
 			const provinces = await getAllProvinces();
 			const centralCities = provinces.filter(
 				(p) => p.placeType === 'Thành phố Trung Ương'
 			);
-			expect(centralCities).toHaveLength(6);
+			expect(centralCities).toHaveLength(9);
+
+			const cityIds = centralCities.map((c) => c.idProvince);
+			expect(cityIds).toContain('01'); // Hà Nội
+			expect(cityIds).toContain('22'); // Quảng Ninh (NQ 36/2026/QH16)
+			expect(cityIds).toContain('24'); // Bắc Ninh (NQ 39/2026/QH16)
+			expect(cityIds).toContain('31'); // Hải Phòng
+			expect(cityIds).toContain('46'); // Huế
+			expect(cityIds).toContain('48'); // Đà Nẵng
+			expect(cityIds).toContain('75'); // Đồng Nai (NQ 30/2026/QH16)
+			expect(cityIds).toContain('79'); // TP.HCM
+			expect(cityIds).toContain('92'); // Cần Thơ
 		});
 	});
 
@@ -120,6 +156,36 @@ describe('v3 API — NQ 202/2025/QH15', () => {
 			// v3 communes do NOT have idDistrict
 			expect(commune).not.toHaveProperty('idDistrict');
 		});
+
+		it('should have Ia Mơ with official NSO code 23938 (not 23737)', async () => {
+			const iaMo = await getCommuneById('23938');
+			expect(iaMo).toBeDefined();
+			expect(iaMo!.name).toBe('Xã Ia Mơ');
+			expect(iaMo!.idProvince).toBe('52');
+
+			// Erroneous code 23737 must not exist as commune in v3
+			const wrongCode = await getCommuneById('23737');
+			expect(wrongCode).toBeUndefined();
+		});
+
+		it('should safely handle edge cases (empty strings, null, undefined)', async () => {
+			expect(await getProvinceById('')).toBeUndefined();
+			expect(await getProvinceById(null as any)).toBeUndefined();
+
+			expect(await getProvinceByCode('')).toBeUndefined();
+			expect(await getProvinceByCode(null as any)).toBeUndefined();
+
+			expect(await searchProvinceByName('')).toEqual([]);
+			expect(await searchProvinceByName('   ')).toEqual([]);
+
+			expect(await getCommuneById('')).toBeUndefined();
+			expect(await getCommuneById(null as any)).toBeUndefined();
+
+			expect(await getCommunesByProvinceId('')).toEqual([]);
+			expect(await getCommunesByProvinceId(null as any)).toEqual([]);
+
+			expect(await searchCommuneByName('')).toEqual([]);
+			expect(await searchCommuneByName('   ')).toEqual([]);
+		});
 	});
 });
-

@@ -5,7 +5,8 @@ import removeAccents from 'remove-accents';
  * Normalize text for search (remove accents, lowercase, trim)
  */
 export const normalizeText = (text: string): string => {
-	return removeAccents(text.toLowerCase().trim());
+	if (!text || typeof text !== 'string') return '';
+	return removeAccents(text.normalize('NFC').toLowerCase().trim());
 };
 
 /**
@@ -31,27 +32,28 @@ export const createSearchIndex = <T extends { name: string }>(
 	items: T[]
 ): Map<string, T[]> => {
 	const index = new Map<string, T[]>();
-	
-	items.forEach(item => {
+
+	items.forEach((item) => {
 		const normalized = normalizeText(item.name);
 		const words = normalized.split(/\s+/);
-		
+
 		// Index by full name
 		if (!index.has(normalized)) {
 			index.set(normalized, []);
 		}
 		index.get(normalized)!.push(item);
-		
+
 		// Index by individual words
-		words.forEach(word => {
-			if (word.length > 1) { // Skip single characters
+		words.forEach((word) => {
+			if (word.length > 1) {
+				// Skip single characters
 				if (!index.has(word)) {
 					index.set(word, []);
 				}
 				index.get(word)!.push(item);
 			}
 		});
-		
+
 		// Index by prefixes (for autocomplete)
 		for (let i = 2; i <= normalized.length; i++) {
 			const prefix = normalized.substring(0, i);
@@ -61,7 +63,7 @@ export const createSearchIndex = <T extends { name: string }>(
 			index.get(prefix)!.push(item);
 		}
 	});
-	
+
 	return index;
 };
 
@@ -75,27 +77,27 @@ export const fuzzySearchWithIndex = <T extends { name: string }>(
 ): T[] => {
 	const normalizedQuery = normalizeText(query);
 	const results = new Set<T>();
-	
+
 	// Exact match first
 	if (searchIndex.has(normalizedQuery)) {
-		searchIndex.get(normalizedQuery)!.forEach(item => results.add(item));
+		searchIndex.get(normalizedQuery)!.forEach((item) => results.add(item));
 	}
-	
+
 	// Prefix matches
 	for (const [key, items] of searchIndex.entries()) {
 		if (key.startsWith(normalizedQuery) || normalizedQuery.startsWith(key)) {
-			items.forEach(item => results.add(item));
+			items.forEach((item) => results.add(item));
 		}
 	}
-	
+
 	// Word matches
 	const queryWords = normalizedQuery.split(/\s+/);
-	queryWords.forEach(word => {
+	queryWords.forEach((word) => {
 		if (searchIndex.has(word)) {
-			searchIndex.get(word)!.forEach(item => results.add(item));
+			searchIndex.get(word)!.forEach((item) => results.add(item));
 		}
 	});
-	
+
 	return Array.from(results);
 };
 
@@ -107,7 +109,7 @@ export const createIdMap = <T extends Record<string, any>>(
 	idField: keyof T
 ): Map<string, T> => {
 	const map = new Map<string, T>();
-	items.forEach(item => {
+	items.forEach((item) => {
 		map.set(item[idField], item);
 	});
 	return map;
@@ -121,7 +123,7 @@ export const createHierarchicalMap = <T extends Record<string, any>>(
 	parentIdField: keyof T
 ): Map<string, T[]> => {
 	const map = new Map<string, T[]>();
-	items.forEach(item => {
+	items.forEach((item) => {
 		const parentId = item[parentIdField];
 		if (!map.has(parentId)) {
 			map.set(parentId, []);

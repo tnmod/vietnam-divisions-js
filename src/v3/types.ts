@@ -12,13 +12,25 @@ export interface CommuneV3 {
 	name: string;
 }
 
+export type WardMappingRelation =
+	| 'UNCHANGED'
+	| 'RENAMED'
+	| 'MERGED'
+	| 'PARTIAL'
+	| 'DISTRICT_CONVERTED'
+	| 'UNCODED_AREA';
+
 export interface WardMapping {
-	oldWardCode: string;
-	oldWardName: string;
-	oldDistrictName: string;
-	oldProvinceName: string;
+	oldWardCode: string | null;
+	oldWardName: string | null;
+	oldDistrictCode?: string | null;
+	oldDistrictName?: string | null;
+	oldProvinceCode?: string | null;
+	oldProvinceName?: string | null;
 	newWardCode: string;
 	newWardName: string;
+	newProvinceCode?: string | null;
 	newProvinceName: string;
+	relation?: WardMappingRelation;
+	note?: string | null;
 }
-

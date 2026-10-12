@@ -60,10 +60,12 @@ export const loadWardMappings = async (): Promise<void> => {
 	oldWardCodeMap = new Map();
 	newWardCodeMap = new Map();
 	wardMappingsData.forEach((m) => {
-		if (!oldWardCodeMap.has(m.oldWardCode)) {
-			oldWardCodeMap.set(m.oldWardCode, []);
+		if (m.oldWardCode) {
+			if (!oldWardCodeMap.has(m.oldWardCode)) {
+				oldWardCodeMap.set(m.oldWardCode, []);
+			}
+			oldWardCodeMap.get(m.oldWardCode)!.push(m);
 		}
-		oldWardCodeMap.get(m.oldWardCode)!.push(m);
 
 		if (!newWardCodeMap.has(m.newWardCode)) {
 			newWardCodeMap.set(m.newWardCode, []);
@@ -79,19 +81,29 @@ export const getV3ProvinceData = async (): Promise<ProvinceV3[]> => {
 	return provinceData;
 };
 
-export const getV3ProvinceById = async (id: string): Promise<ProvinceV3 | undefined> => {
+export const getV3ProvinceById = async (
+	id: string
+): Promise<ProvinceV3 | undefined> => {
+	if (!id) return undefined;
 	await loadV3ProvinceData();
-	return provinceIdMap.get(id);
+	return provinceIdMap.get(String(id));
 };
 
-export const getV3ProvinceByCode = async (code: string): Promise<ProvinceV3 | undefined> => {
+export const getV3ProvinceByCode = async (
+	code: string
+): Promise<ProvinceV3 | undefined> => {
+	if (!code || typeof code !== 'string') return undefined;
 	await loadV3ProvinceData();
 	return provinceCodeMap.get(code.toUpperCase());
 };
 
-export const searchV3Provinces = async (query: string): Promise<ProvinceV3[]> => {
+export const searchV3Provinces = async (
+	query: string
+): Promise<ProvinceV3[]> => {
+	if (!query) return [];
 	await loadV3ProvinceData();
 	const normalizedQuery = normalizeText(query);
+	if (!normalizedQuery) return [];
 	const results = new Set<ProvinceV3>();
 	for (const [key, provinces] of provinceSearchIndex.entries()) {
 		if (key.includes(normalizedQuery) || normalizedQuery.includes(key)) {
@@ -106,19 +118,27 @@ export const getV3CommuneData = async (): Promise<CommuneV3[]> => {
 	return communeData;
 };
 
-export const getV3CommuneById = async (id: string): Promise<CommuneV3 | undefined> => {
+export const getV3CommuneById = async (
+	id: string
+): Promise<CommuneV3 | undefined> => {
+	if (!id) return undefined;
 	await loadV3CommuneData();
-	return communeIdMap.get(id);
+	return communeIdMap.get(String(id));
 };
 
-export const getV3CommunesByProvinceId = async (provinceId: string): Promise<CommuneV3[]> => {
+export const getV3CommunesByProvinceId = async (
+	provinceId: string
+): Promise<CommuneV3[]> => {
+	if (!provinceId) return [];
 	await loadV3CommuneData();
-	return communesByProvinceMap.get(provinceId) || [];
+	return communesByProvinceMap.get(String(provinceId)) || [];
 };
 
 export const searchV3Communes = async (query: string): Promise<CommuneV3[]> => {
+	if (!query) return [];
 	await loadV3CommuneData();
 	const normalizedQuery = normalizeText(query);
+	if (!normalizedQuery) return [];
 	const results = new Set<CommuneV3>();
 	for (const [key, communes] of communeSearchIndex.entries()) {
 		if (key.includes(normalizedQuery) || normalizedQuery.includes(key)) {
@@ -133,13 +153,18 @@ export const getWardMappingsData = async (): Promise<WardMapping[]> => {
 	return wardMappingsData;
 };
 
-export const getMappingsByOldCode = async (oldCode: string): Promise<WardMapping[]> => {
+export const getMappingsByOldCode = async (
+	oldCode: string
+): Promise<WardMapping[]> => {
+	if (!oldCode) return [];
 	await loadWardMappings();
-	return oldWardCodeMap.get(oldCode) || [];
+	return oldWardCodeMap.get(String(oldCode)) || [];
 };
 
-export const getMappingsByNewCode = async (newCode: string): Promise<WardMapping[]> => {
+export const getMappingsByNewCode = async (
+	newCode: string
+): Promise<WardMapping[]> => {
+	if (!newCode) return [];
 	await loadWardMappings();
-	return newWardCodeMap.get(newCode) || [];
+	return newWardCodeMap.get(String(newCode)) || [];
 };
-

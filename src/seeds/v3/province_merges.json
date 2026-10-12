@@ -107,7 +107,7 @@
   },
   {
     "newProvinceId": "75",
-    "newProvinceName": "Đồng Nai",
+    "newProvinceName": "Thành phố Đồng Nai",
     "mergedFrom": [
       {
         "oldProvinceId": "70",
@@ -187,7 +187,7 @@
   },
   {
     "newProvinceId": "24",
-    "newProvinceName": "Bắc Ninh",
+    "newProvinceName": "Thành phố Bắc Ninh",
     "mergedFrom": [
       {
         "oldProvinceId": "27",

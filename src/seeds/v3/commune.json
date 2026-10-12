@@ -1702,7 +1702,7 @@
   {
     "idProvince": "11",
     "idCommune": "03194",
-    "name": "Xã Nậm Nèn"
+    "name": "Xã Nậm Nèn"
   },
   {
     "idProvince": "11",
@@ -2462,12 +2462,12 @@
   {
     "idProvince": "15",
     "idCommune": "04345",
-    "name": "Xã Mường Lai"
+    "name": "Xã Mường Lai"
   },
   {
     "idProvince": "15",
     "idCommune": "04363",
-    "name": "Xã Phúc Lợi"
+    "name": "Xã Phúc Lợi"
   },
   {
     "idProvince": "15",
@@ -2482,7 +2482,7 @@
   {
     "idProvince": "15",
     "idCommune": "04387",
-    "name": "Xã Châu Quế"
+    "name": "Xã Châu Quế"
   },
   {
     "idProvince": "15",
@@ -2502,17 +2502,17 @@
   {
     "idProvince": "15",
     "idCommune": "04429",
-    "name": "Xã Tân Hợp"
+    "name": "Xã Tân Hợp"
   },
   {
     "idProvince": "15",
     "idCommune": "04441",
-    "name": "Xã Xuân Ái"
+    "name": "Xã Xuân Ái"
   },
   {
     "idProvince": "15",
     "idCommune": "04450",
-    "name": "Xã Mỏ Vàng"
+    "name": "Xã Mỏ Vàng"
   },
   {
     "idProvince": "15",
@@ -2557,7 +2557,7 @@
   {
     "idProvince": "15",
     "idCommune": "04537",
-    "name": "Xã Lương Thịnh"
+    "name": "Xã Lương Thịnh"
   },
   {
     "idProvince": "15",
@@ -2597,7 +2597,7 @@
   {
     "idProvince": "15",
     "idCommune": "04630",
-    "name": "Xã Tú Lệ"
+    "name": "Xã Tú Lệ"
   },
   {
     "idProvince": "15",
@@ -2637,12 +2637,12 @@
   {
     "idProvince": "15",
     "idCommune": "04699",
-    "name": "Xã Chấn Thịnh"
+    "name": "Xã Chấn Thịnh"
   },
   {
     "idProvince": "15",
     "idCommune": "04705",
-    "name": "Xã Thượng Bằng La"
+    "name": "Xã Thượng Bằng La"
   },
   {
     "idProvince": "15",
@@ -11336,11 +11336,6 @@
   },
   {
     "idProvince": "52",
-    "idCommune": "23737",
-    "name": "Xã Ia Mơ"
-  },
-  {
-    "idProvince": "52",
     "idCommune": "23749",
     "name": "Xã Ia Phí"
   },
@@ -11488,6 +11483,11 @@
     "idProvince": "52",
     "idCommune": "23935",
     "name": "Xã Ia Lâu"
+  },
+  {
+    "idProvince": "52",
+    "idCommune": "23938",
+    "name": "Xã Ia Mơ"
   },
   {
     "idProvince": "52",
@@ -13422,17 +13422,17 @@
   {
     "idProvince": "79",
     "idCommune": "26882",
-    "name": "Phường An Hội Tây"
+    "name": "Phường An Hội Tây"
   },
   {
     "idProvince": "79",
     "idCommune": "26884",
-    "name": "Phường Gò Vấp"
+    "name": "Phường Gò Vấp"
   },
   {
     "idProvince": "79",
     "idCommune": "26890",
-    "name": "Phường Hạnh Thông"
+    "name": "Phường Hạnh Thông"
   },
   {
     "idProvince": "79",
@@ -13467,27 +13467,27 @@
   {
     "idProvince": "79",
     "idCommune": "26968",
-    "name": "Phường Tân Sơn Nhất"
+    "name": "Phường Tân Sơn Nhất"
   },
   {
     "idProvince": "79",
     "idCommune": "26977",
-    "name": "Phường Tân Sơn Hòa"
+    "name": "Phường Tân Sơn Hòa"
   },
   {
     "idProvince": "79",
     "idCommune": "26983",
-    "name": "Phường Bảy Hiền"
+    "name": "Phường Bảy Hiền"
   },
   {
     "idProvince": "79",
     "idCommune": "26995",
-    "name": "Phường Tân Hòa"
+    "name": "Phường Tân Hòa"
   },
   {
     "idProvince": "79",
     "idCommune": "27004",
-    "name": "Phường Tân Bình"
+    "name": "Phường Tân Bình"
   },
   {
     "idProvince": "79",
@@ -13602,17 +13602,17 @@
   {
     "idProvince": "79",
     "idCommune": "27259",
-    "name": "Phường Xóm Chiếu"
+    "name": "Phường Xóm Chiếu"
   },
   {
     "idProvince": "79",
     "idCommune": "27265",
-    "name": "Phường Khánh Hội"
+    "name": "Phường Khánh Hội"
   },
   {
     "idProvince": "79",
     "idCommune": "27286",
-    "name": "Phường Vĩnh Hội"
+    "name": "Phường Vĩnh Hội"
   },
   {
     "idProvince": "79",
@@ -13697,7 +13697,7 @@
   {
     "idProvince": "79",
     "idCommune": "27478",
-    "name": "Phường Tân Thuận"
+    "name": "Phường Tân Thuận"
   },
   {
     "idProvince": "79",
@@ -13707,7 +13707,7 @@
   {
     "idProvince": "79",
     "idCommune": "27487",
-    "name": "Phường Tân Mỹ"
+    "name": "Phường Tân Mỹ"
   },
   {
     "idProvince": "79",
@@ -14877,7 +14877,7 @@
   {
     "idProvince": "86",
     "idCommune": "29584",
-    "name": "Xã An Bình"
+    "name": "Xã An Bình"
   },
   {
     "idProvince": "86",
@@ -14902,12 +14902,12 @@
   {
     "idProvince": "86",
     "idCommune": "29623",
-    "name": "Xã Nhơn Phú"
+    "name": "Xã Nhơn Phú"
   },
   {
     "idProvince": "86",
     "idCommune": "29638",
-    "name": "Xã Bình Phước"
+    "name": "Xã Bình Phước"
   },
   {
     "idProvince": "86",
@@ -14927,7 +14927,7 @@
   {
     "idProvince": "86",
     "idCommune": "29668",
-    "name": "Xã Quới An"
+    "name": "Xã Quới An"
   },
   {
     "idProvince": "86",
@@ -14942,7 +14942,7 @@
   {
     "idProvince": "86",
     "idCommune": "29698",
-    "name": "Xã Trung Ngãi"
+    "name": "Xã Trung Ngãi"
   },
   {
     "idProvince": "86",
@@ -14952,7 +14952,7 @@
   {
     "idProvince": "86",
     "idCommune": "29713",
-    "name": "Xã Hiếu Thành"
+    "name": "Xã Hiếu Thành"
   },
   {
     "idProvince": "86",
@@ -14992,7 +14992,7 @@
   {
     "idProvince": "86",
     "idCommune": "29785",
-    "name": "Xã Tân Lược"
+    "name": "Xã Tân Lược"
   },
   {
     "idProvince": "86",
@@ -15027,7 +15027,7 @@
   {
     "idProvince": "86",
     "idCommune": "29845",
-    "name": "Xã Vĩnh Xuân"
+    "name": "Xã Vĩnh Xuân"
   },
   {
     "idProvince": "86",

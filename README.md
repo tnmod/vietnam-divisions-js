@@ -99,7 +99,7 @@ import { migrateWardCode } from 'vietnam-divisions-js/migration';
 | Tỉnh/TP | 63 | 34 |
 | Quận/Huyện | 696 | — (đã bỏ) |
 | Xã/Phường | 10,051 | 3,321 |
-| Ánh xạ cũ→mới | — | 10,977 |
+| Ánh xạ cũ→mới | — | 10,571 |
 
 ## License
 
